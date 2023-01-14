@@ -38,7 +38,7 @@ class PollController extends Controller
             $candidate->political_party_id = $request->political_party_id;
             $candidate->position_id = $request->position_id;
 
-            $candidate->save();
+            $candidate->save(); 
 
             return response()->json(["data" => $candidate],200);
         }
