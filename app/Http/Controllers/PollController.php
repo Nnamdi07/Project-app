@@ -23,7 +23,7 @@ class PollController extends Controller
 
         return response()->json(["data" => $candidate],201);
     }
-    public function update_candidate_info($id,Request $request){    //function to edit or update the information of anuy candidate that decides to run.
+    public function update_candidate_info(Request $request){    //function to edit or update the information of anuy candidate that decides to run.
         $request->validate([
             'id'=>'required',
             'name' => 'required|string',
