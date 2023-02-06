@@ -16,7 +16,6 @@ class PoliticalPartyController extends Controller
 
         $party->save();
 
-
         return response()->json(["data" => $party],201);
     }
 

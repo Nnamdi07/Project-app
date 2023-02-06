@@ -25,7 +25,6 @@ class PollController extends Controller
 
             $candidate->save();
 
-
             return response()->json(["data" => $candidate],201);
         }
     }
@@ -40,7 +39,7 @@ class PollController extends Controller
         $candidate = Candidate::where('id', $request->id)->first();
 
         if($candidate){
-            $candidate->name = $reques['name'];
+            $candidate->name = $request['name'];
             $candidate->political_party_id = $request['political_party_id'];
             $candidate->position_id = $request['position_id'];
 
@@ -69,6 +68,8 @@ class PollController extends Controller
             $ballot->position_id = $request['position_id'];
 
             $ballot->save();
+
+            return response()->json(["data" => $ballot],200);
         }
 
         
